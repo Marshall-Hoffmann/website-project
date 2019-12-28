@@ -1,0 +1,268 @@
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.validation in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.database.slave in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.classManagerJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.netServer.autoStart in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.nativeAuthentication in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.access.btree in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.access.uniquewithduplicatenullssort in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.daemon in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.classes.jdbcJ8 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.lf in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.uuidJ1 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.timerJ1 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.rawStore.transaction in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.jdk.cryptographyJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.cryptographyJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.jdk.resourceAdapterJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.access.sort in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.classes.JNDIAuthentication in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.basicAuthentication in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.tcf in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.database in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.ef in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.streams in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.lcf in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.rawStore.log.readonly in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.jdk.lockManagerJ6 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.dataDictionary in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.classes.resourceAdapterJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.classes.rawStore.data.genericJ4 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.XPLAINFactory in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.resourceAdapterJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.rawStore.log in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.classes.cryptographyJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.resultSetStatisticsFactory in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.access.heap in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.dvfJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.optimizer in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.jdbcJ8 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.lockManagerJ6 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.jdk.cacheManagerJ6 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.mgmt.jmx in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.replication.master in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.NoneAuthentication in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.rawStore.data.genericJ4 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.jdk.jdbcJ8 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.cacheManagerJ6 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.rawStore.data.genericJ1 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.jdk.dvfJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.classes.dvfJ2 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.javaCompiler in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.replication.slave in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.specificAuthentication in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.mgmt.null in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.rawStore in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.JNDIAuthentication in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.jdk.rawStore.data.genericJ1 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.module.access in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.jdk.mgmt.jmx in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main] Ignored duplicate property derby.env.jdk.rawStore.data.genericJ4 in jar:file:/C:/Users/Three/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar!/org/apache/derby/modules.properties
+Thu Dec 26 18:03:37 CST 2019 Thread[restartedMain,5,main]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+----------------------------------------------------------------
+Thu Dec 26 18:03:37 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a816c00e-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:27:32 CST 2019:
+Shutting down instance a816c00e-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:27:33 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance 65548115-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:27:57 CST 2019:
+Shutting down instance 65548115-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:27:57 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance ad97c21b-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:28:56 CST 2019:
+Shutting down instance ad97c21b-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:28:57 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance b8e40321-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:29:45 CST 2019:
+Shutting down instance b8e40321-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:29:46 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance 07394427-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:32:24 CST 2019:
+Shutting down instance 07394427-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:32:25 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance 45934537-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:34:43 CST 2019:
+Shutting down instance 45934537-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:34:44 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance 38e3464a-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:35:11 CST 2019:
+Shutting down instance 38e3464a-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:35:12 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance 8889475a-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:35:58 CST 2019:
+Shutting down instance 8889475a-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:35:59 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance 74a4886c-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:36:33 CST 2019:
+Shutting down instance 74a4886c-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:36:34 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance a470497f-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:42:46 CST 2019:
+Shutting down instance a470497f-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:42:47 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance 73720a91-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:43:12 CST 2019:
+Shutting down instance 73720a91-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:43:12 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance 8bc4cba3-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:44:04 CST 2019:
+Shutting down instance 8bc4cba3-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+----------------------------------------------------------------
+Fri Dec 27 17:44:05 CST 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.1.3 - (1853019): instance 6d688cb5-016f-44aa-6e02-00000a5c3490 
+on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 
+Loaded from file:/C:/Users/Three/eclipse/db-derby-10.15.1.3-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=13.0.1+9
+user.dir=C:\Users\Three\Downloads\marshall-website\marshall-website
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Dec 27 17:49:30 CST 2019:
+Shutting down instance 6d688cb5-016f-44aa-6e02-00000a5c3490 on database directory memory:C:\Users\Three\Downloads\marshall-website\marshall-website\testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@4e0e2f2a 

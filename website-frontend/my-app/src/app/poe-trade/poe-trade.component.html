@@ -1,0 +1,57 @@
+<br>
+
+<h2 class="text-center text-primary">Poe Trade Tracker</h2>
+
+<br>
+<div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
+    <button class="btn btn-success" (click)="view='new'">Add New Item</button>
+</div>
+
+<div *ngIf="view==='new'" style="padding: 0;" class="container card text-center">
+    <button class="btn btn-primary" (click)="view='current'">View Old Items</button>
+</div>
+
+<div *ngIf="view==='current'" class="container">
+    <div class="row" style="text-align: center">
+        <div class="card col-4 text-center" style="padding: 0;" *ngFor="let item of tradeItems">
+            <h3 class="card-header text-primary">{{item.name}}</h3>
+            <p class="card-body">{{item.description}}</p>
+            <div class="card-footer">
+                <a href="{{item.tradeUrl}}" class="btn btn-primary">Trade</a>
+                <a *ngIf="item.priceHistoryUrl" href="{{item.priceHistoryUrl}}" class="btn btn-success">Price
+                    History</a>
+                    <a (click)="deleteItem(item.tradeId)" class="btn btn-danger">X</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="view==='new'" class="container" style="padding: 0;">
+    <form [formGroup]="newItemForm" (ngSubmit)="addItem(newItemForm.value)">
+        <br>
+        <div>
+            <label for="name">Item Name</label>
+            <input class="form-control" type="text" id="name" formControlName="name">
+        </div>
+
+        <div>
+            <label for="description">Description</label>
+            <input class="form-control" type="text" id="description" formControlName="description">
+        </div>
+
+        <div>
+            <label for="tradeUrl">Poe Trade Url</label>
+            <input class="form-control" type="text" id="tradeUrl" formControlName="tradeUrl">
+        </div>
+
+        <div>
+            <label for="priceHistoryUrl">Price History Url</label>
+            <input class="form-control" type="text" id="priceHistoryUrl" formControlName="priceHistoryUrl">
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-success col-12" type="submit">Create New Item</button>
+        </div>
+        <br>
+    </form>
+</div>
