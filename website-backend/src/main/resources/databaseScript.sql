@@ -23,8 +23,19 @@ create table TRADE_LIST (
 	PRICE_HISTORY_URL varchar(100),
 	constraint ITEM_ID_PK primary key (ITEM_ID)
 )
-----------------------------------------------------------------
+------------------- USER_LIST -----------------------------------
+create table USER_LIST (
+	NAME varchar(50),
+	PASSWORD varchar(50),
+	EMAIL varchar(50),
+	constraint EMAIL_PK primary key (EMAIL)
+)
+-----------------------------------------------------------------
 
 insert into TRADE_LIST values (1, "Unending Hunger", "Spectre Soul Eater Jewel", "https://poe.trade/search/huriumdutoheno", "https://poe.ninja/challengehc/unique-jewels/unending-hunger-cobalt-jewel");
 
+insert into USER_LIST values ("Marshall", "pass", "test@gmail.com");
+
 select * from trade_list;
+
+select * from user_list;

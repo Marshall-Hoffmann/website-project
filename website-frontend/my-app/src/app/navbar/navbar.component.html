@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-default navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" routerLink="home">Website Project</a>
+        </div>
+        <ul class="nav navbar-nav" routerLinkActive="active">
+            <li class="nav-item"><a class="nav-link" routerLink="poe-trade">Poe Trade Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" routerLink="death">Death Dashboard</a></li>
+        </ul>
+        <div *ngIf="!loggedInUser">
+            <ul class="nav navbar-nav navbar-right" routerLinkActive="active">
+                <li class="nav-item"><a class="nav-link" routerLink="signup">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="login">Login</a></li>
+            </ul>
+        </div>
+        <!-- Todo: Make the signout a drop down from user name -->
+        <div *ngIf="loggedInUser">
+            User: {{loggedInUser.name}}
+            <ul class="nav navbar-nav navbar-right" routerLinkActive="active">
+                <li class="nav-item"><a class="nav-link" (click)='signout()'>Sign Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

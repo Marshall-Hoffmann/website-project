@@ -9,13 +9,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HcDeathsComponent } from './hc-deaths/hc-deaths.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PoeTradeService } from './poe-trade/poe-trade.service';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PoeTradeComponent,
     ResumeComponent,
-    HcDeathsComponent
+    HcDeathsComponent,
+    HomeComponent,
+    NavbarComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +33,8 @@ import { PoeTradeService } from './poe-trade/poe-trade.service';
     HttpClientModule
   ],
   providers: [
-    PoeTradeService
+    PoeTradeService,
+    NavbarComponent
   ],
   bootstrap: [AppComponent]
 })
