@@ -57,7 +57,6 @@ public class PoeTradeDAOImpl implements PoeTradeDAO {
 		
 		try {
 			List<TradeItem> fullList = getAllTradeItems();
-			System.out.println("emailId: " + emailId);
 			List<TradeItem> filteredList = fullList.stream().filter(x -> x.getEmailId().equals(emailId)).collect(Collectors.toList());
 			return filteredList;
 		} catch (Exception e) {

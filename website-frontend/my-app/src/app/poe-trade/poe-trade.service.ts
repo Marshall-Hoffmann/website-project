@@ -15,7 +15,6 @@ export class PoeTradeService {
 
   addTradeItem(tradeItem:TradeItem) {
     let user:User = JSON.parse(sessionStorage.getItem("user"));
-    // let body = [tradeItem, user.email];
     return this.httpClient.post<number>(this.tradeUrl+"addTradeItem", tradeItem);
   }
 

@@ -13,22 +13,16 @@ public class DeathEntity {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer deathId;
 	
-//	@Column
 	private String charName;
 	
-//	@Column
 	private String charAscendency;
 	
-//	@Column
 	private Integer charLevel;
 	
-//	@Column 
 	private Integer timePlayed;
-	
-//	@Column
+
 	private String deathLocation;
 	
-//	@Column
 	private String deathDescription;
 
 	public Integer getDeathId() {

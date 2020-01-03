@@ -34,7 +34,6 @@ export class PoeTradeComponent implements OnInit {
 
   ngOnInit() {
     this.checkLoggedIn();
-    // this.getItems();
   }
 
   checkLoggedIn() {

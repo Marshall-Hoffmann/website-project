@@ -30,7 +30,6 @@ public class PoeTradeServiceImpl implements PoeTradeService {
 	
 	@Override
 	public Integer deleteTradeItem(Integer itemId) throws Exception {
-//		Integer itemId;
 		try {
 			itemId = poeTradeDAO.deleteTradeItem(itemId);
 		} catch (Exception e){
@@ -43,7 +42,6 @@ public class PoeTradeServiceImpl implements PoeTradeService {
 	public List<TradeItem> getTradeItems(String emailId) throws Exception {
 		List<TradeItem> itemList;
 		try {
-			System.out.println("getId again: " + emailId);
 			itemList = poeTradeDAO.getTradeItems(emailId); 
 		} catch (Exception e) {
 			throw new Exception(e);

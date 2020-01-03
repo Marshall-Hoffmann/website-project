@@ -1,7 +1,5 @@
 package marshall.project.api;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +27,6 @@ public class PoeTradeAPI {
 	@RequestMapping(value="/poe-trade/getTradeItems", method=RequestMethod.GET)
 	public ResponseEntity<List<TradeItem>> getTradeItems(@RequestParam String emailId) {
 		try {
-			System.out.println("getId: " + emailId);
 			List<TradeItem> tradeItems = poeTradeService.getTradeItems(emailId);
 			return new ResponseEntity<List<TradeItem>>(tradeItems, HttpStatus.OK);
 		} catch (Exception e) {

@@ -7,7 +7,6 @@ public class TradeItem {
 	private String tradeUrl;
 	private String priceHistoryUrl;
 	private String emailId;
-//	private Integer userId;
 
 	public String getEmailId() {
 		return emailId;
@@ -45,12 +44,4 @@ public class TradeItem {
 	public void setItemId(Integer itemId) {
 		this.itemId = itemId;
 	}
-//	public Integer getUserId() {
-//		return userId;
-//	}
-//	public void setUserId(Integer userId) {
-//		this.userId = userId;
-//	}
-	
-	
 }

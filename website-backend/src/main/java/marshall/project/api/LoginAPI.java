@@ -22,8 +22,6 @@ public class LoginAPI {
 	
 	@RequestMapping(value="/login/", method=RequestMethod.POST)
 	public ResponseEntity<User> login(@RequestBody User credentials) {
-		System.out.println("hello" + credentials.getName());
-		System.out.println("hello2" + credentials.getPassword());
 		try {
 			User user = loginService.login(credentials);
 			return new ResponseEntity<User>(user, HttpStatus.OK);
@@ -35,8 +33,6 @@ public class LoginAPI {
 	
 	@RequestMapping(value="/signup/", method=RequestMethod.POST)
 	public ResponseEntity<User> signup(@RequestBody User credentials) {
-		System.out.println("hello" + credentials.getName());
-		System.out.println("hello2" + credentials.getPassword());
 		try {
 			User user = loginService.signup(credentials);
 			return new ResponseEntity<User>(user, HttpStatus.OK);
