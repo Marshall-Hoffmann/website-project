@@ -2,6 +2,7 @@ package marshall.project.dao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -10,6 +11,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 
 import marshall.project.entity.TradeItemEntity;
+import marshall.project.entity.UserEntity;
 import marshall.project.model.TradeItem;
 
 @Repository
@@ -22,11 +24,12 @@ public class PoeTradeDAOImpl implements PoeTradeDAO {
 	public Integer addTradeItem(TradeItem tradeItem) throws Exception {
 		TradeItemEntity tradeItemEntity = new TradeItemEntity();
 		try {
-//			TradeItemEntity tradeItemEntity = new TradeItemEntity();
 			tradeItemEntity.setDescription(tradeItem.getDescription());
 			tradeItemEntity.setName(tradeItem.getName());
 			tradeItemEntity.setPriceHistoryUrl(tradeItem.getPriceHistoryUrl());
 			tradeItemEntity.setTradeUrl(tradeItem.getTradeUrl());
+			UserEntity userEntity = entityManager.find(UserEntity.class, tradeItem.getEmailId());
+			tradeItemEntity.setUserEntity(userEntity);
 			entityManager.persist(tradeItemEntity);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -40,6 +43,7 @@ public class PoeTradeDAOImpl implements PoeTradeDAO {
 	public Integer deleteTradeItem(Integer itemId) throws Exception {
 		try {
 			TradeItemEntity tradeItemEntity = entityManager.find(TradeItemEntity.class, itemId);
+			tradeItemEntity.setUserEntity(null);
 			entityManager.remove(tradeItemEntity);
 			return itemId;
 		} catch (Exception e) {
@@ -49,30 +53,38 @@ public class PoeTradeDAOImpl implements PoeTradeDAO {
 		}
 	}
 	
-	public List<TradeItem> getTradeItems() throws Exception {
+	public List<TradeItem> getTradeItems(String emailId) throws Exception {
 		
 		try {
-			String jpqlString = "select t.itemId, t.name, t.description, t.tradeUrl, t.priceHistoryUrl from TradeItemEntity t";
-			System.out.println("made it here");
+			List<TradeItem> fullList = getAllTradeItems();
+			System.out.println("emailId: " + emailId);
+			List<TradeItem> filteredList = fullList.stream().filter(x -> x.getEmailId().equals(emailId)).collect(Collectors.toList());
+			return filteredList;
+		} catch (Exception e) {
+			e.printStackTrace();
+			List<TradeItem> emptyList = null;
+			return emptyList;
+		}
+	}
+	
+	public List<TradeItem> getAllTradeItems() throws Exception {
+		try {
+			String jpqlString = "select t.itemId, t.name, t.description, t.tradeUrl, t.priceHistoryUrl, t.userEntity.email from TradeItemEntity t";
 			Query query = entityManager.createQuery(jpqlString);
 			List<Object[]> tradeItemEntityList = query.getResultList();
 			List<TradeItem> tradeItems = new ArrayList<TradeItem>();
 			if(tradeItemEntityList != null) {
-				System.out.println("made it here again: " + tradeItemEntityList);
 				for(Object[] te: tradeItemEntityList) {
-					System.out.println("1: " + te[0] + " dfdfdf " + te[1]);
 					TradeItem tradeItem = new TradeItem();
-					
-					tradeItem.setTradeId((Integer) te[0]);
+					tradeItem.setItemId((Integer) te[0]);
 					tradeItem.setDescription((String) te[2]);
 					tradeItem.setName((String) te[1]);
 					tradeItem.setPriceHistoryUrl((String) te[4]);
 					tradeItem.setTradeUrl((String)te[3]);
-//					System.out.println(tradeItem);
+					tradeItem.setEmailId((String)te[5]);
 					tradeItems.add(tradeItem);
 				}
 			}
-			System.out.println(tradeItems);
 			return tradeItems;
 		} catch (Exception e) {
 			e.printStackTrace();

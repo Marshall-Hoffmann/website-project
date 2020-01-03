@@ -3,6 +3,8 @@ import { TradeItemList } from './TradeItemList';
 import { FormBuilder } from '@angular/forms';
 import { TradeItem } from './TradeItem';
 import { PoeTradeService } from './poe-trade.service';
+import { User } from '../shared/models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-poe-trade',
@@ -11,7 +13,7 @@ import { PoeTradeService } from './poe-trade.service';
 })
 export class PoeTradeComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private tradeService: PoeTradeService) { 
+  constructor(private formBuilder: FormBuilder, private tradeService: PoeTradeService, private router:Router) { 
     this.newItemForm = this.formBuilder.group({
       name: '',
       description:'',
@@ -31,13 +33,23 @@ export class PoeTradeComponent implements OnInit {
   newItemForm;
 
   ngOnInit() {
-    this.getItems();
+    this.checkLoggedIn();
+    // this.getItems();
   }
 
+  checkLoggedIn() {
+    let user:User = JSON.parse(sessionStorage.getItem("user"));
+    if(user==null) {
+      this.router.navigate(['login']);
+    } else {
+      this.getItems();
+    }
+  }
 
   addItem(tradeItem:TradeItem) {
-    console.log(tradeItem);
     tradeItem.tradeId = -1;
+    let user:User = JSON.parse(sessionStorage.getItem("user"));
+    tradeItem.emailId = user.email;
     this.tradeService.addTradeItem(tradeItem).subscribe(
       tradeId => {
         tradeItem.tradeId = tradeId;
@@ -60,7 +72,6 @@ export class PoeTradeComponent implements OnInit {
       tradeItems => {
         this.tradeItems = tradeItems;
         this.errorMessage = null;
-        console.log(this.tradeItems);
       }, err => {
         this.errorMessage = "Trade Items could not be found";
         this.successMessage = null;

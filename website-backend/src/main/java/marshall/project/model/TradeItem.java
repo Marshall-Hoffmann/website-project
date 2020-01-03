@@ -1,17 +1,19 @@
 package marshall.project.model;
 
 public class TradeItem {
-	private Integer tradeId;
+	private Integer itemId;
 	private String name;
 	private String description;
 	private String tradeUrl;
 	private String priceHistoryUrl;
-	
-	public Integer getTradeId() {
-		return tradeId;
+	private String emailId;
+//	private Integer userId;
+
+	public String getEmailId() {
+		return emailId;
 	}
-	public void setTradeId(Integer tradeId) {
-		this.tradeId = tradeId;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 	public String getName() {
 		return name;
@@ -37,6 +39,18 @@ public class TradeItem {
 	public void setPriceHistoryUrl(String priceHistoryUrl) {
 		this.priceHistoryUrl = priceHistoryUrl;
 	}
+	public Integer getItemId() {
+		return itemId;
+	}
+	public void setItemId(Integer itemId) {
+		this.itemId = itemId;
+	}
+//	public Integer getUserId() {
+//		return userId;
+//	}
+//	public void setUserId(Integer userId) {
+//		this.userId = userId;
+//	}
 	
 	
 }

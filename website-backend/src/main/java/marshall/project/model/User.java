@@ -4,7 +4,14 @@ public class User {
 	private String name;
 	private String password;
 	private String email;
+	private Integer userId;
 	
+	public Integer getUserId() {
+		return userId;
+	}
+	public void setUserId(Integer userId) {
+		this.userId = userId;
+	}
 	public String getName() {
 		return name;
 	}

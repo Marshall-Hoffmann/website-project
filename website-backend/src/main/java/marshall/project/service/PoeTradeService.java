@@ -10,6 +10,6 @@ public interface PoeTradeService {
 	
 	public Integer deleteTradeItem(Integer itemId) throws Exception;
 	
-	public List<TradeItem> getTradeItems() throws Exception;
+	public List<TradeItem> getTradeItems(String emailId) throws Exception;
 	
 }

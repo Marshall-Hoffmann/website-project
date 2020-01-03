@@ -40,10 +40,11 @@ public class PoeTradeServiceImpl implements PoeTradeService {
 	}
 	
 	@Override
-	public List<TradeItem> getTradeItems() throws Exception {
+	public List<TradeItem> getTradeItems(String emailId) throws Exception {
 		List<TradeItem> itemList;
 		try {
-			itemList = poeTradeDAO.getTradeItems();
+			System.out.println("getId again: " + emailId);
+			itemList = poeTradeDAO.getTradeItems(emailId); 
 		} catch (Exception e) {
 			throw new Exception(e);
 		}
