@@ -39,15 +39,22 @@ create table COLLECTION_LIST (
 	COLLECTION_NAME VARCHAR(50),
 	constraint COLLECTION_ID_PK primary key (COLLECTION_ID)	
 )
+------------------- LEAGUE_LIST ----------------------
+create table LEAGUE_LIST (
+	LEAGUE_ID INT(10),
+	LEAGUE_NAME VARCHAR(50),
+	constraint LEAGUE_ID_PK primary key (LEAGUE_ID)	
+)
 ------------------- SEARCH_COLLECTION_LIST ----------------------
 create table SEARCH_COLLECTION_LIST (
 	SEARCH_COLLECTION_ID INT(10),
 	COLLECTION_ID INT(10),
 	SEARCH_ID INT(10),
+	LEAGUE_ID INT(10),
 	constraint SC_ID_PK primary key (SEARCH_COLLECTION_ID),
 	constraint COLLECTION_ID_FK foreign key (COLLECTION_ID) references COLLECTION_LIST(COLLECTION_ID),
-	constraint SEARCH_ID_FK foreign key (SEARCH_ID) references TRADE_LIST(ITEM_ID)
-	
+	constraint SEARCH_ID_FK foreign key (SEARCH_ID) references TRADE_LIST(ITEM_ID),
+	constraint LEAGUE_ID_FK foreign key (LEAGUE_ID) references LEAGUE_LIST(LEAGUE_ID)
 )
 -----------------------------------------------------------------
 

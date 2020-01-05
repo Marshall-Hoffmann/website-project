@@ -24,4 +24,8 @@ public class SearchCollectionEntity {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="SEARCH_ID")
 	private TradeItemEntity tradeItemEntity;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="LEAGUE_ID")
+	private LeagueEntity leagueEntity;
 }
