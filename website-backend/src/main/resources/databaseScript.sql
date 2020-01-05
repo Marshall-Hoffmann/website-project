@@ -23,7 +23,7 @@ create table TRADE_LIST (
 	TRADE_URL varchar(100),
 	PRICE_HISTORY_URL varchar(100),
 	constraint ITEM_ID_PK primary key (ITEM_ID),
-	constraint EMAIL_ID_PK FOREIGN KEY (EMAIL_ID) REFERENCES USER_LIST(EMAIL)
+	constraint EMAIL_ID_FK FOREIGN KEY (EMAIL_ID) REFERENCES USER_LIST(EMAIL)
 )
 ------------------- USER_LIST -----------------------------------
 create table USER_LIST (
@@ -32,6 +32,22 @@ create table USER_LIST (
 	EMAIL varchar(50),
 	USER_ID INT(10) UNIQUE,	
 	constraint EMAIL_PK primary key (EMAIL)	
+)
+------------------- COLLECTION_LIST ----------------------
+create table COLLECTION_LIST (
+	COLLECTION_ID INT(10),
+	COLLECTION_NAME VARCHAR(50),
+	constraint COLLECTION_ID_PK primary key (COLLECTION_ID)	
+)
+------------------- SEARCH_COLLECTION_LIST ----------------------
+create table SEARCH_COLLECTION_LIST (
+	SEARCH_COLLECTION_ID INT(10),
+	COLLECTION_ID INT(10),
+	SEARCH_ID INT(10),
+	constraint SC_ID_PK primary key (SEARCH_COLLECTION_ID),
+	constraint COLLECTION_ID_FK foreign key (COLLECTION_ID) references COLLECTION_LIST(COLLECTION_ID),
+	constraint SEARCH_ID_FK foreign key (SEARCH_ID) references TRADE_LIST(ITEM_ID)
+	
 )
 -----------------------------------------------------------------
 
