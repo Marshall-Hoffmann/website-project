@@ -28,4 +28,50 @@ public class SearchCollectionEntity {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="LEAGUE_ID")
 	private LeagueEntity leagueEntity;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="USER_ID")
+	private UserEntity userEntity;
+
+	public Integer getSearchCollectionId() {
+		return searchCollectionId;
+	}
+
+	public void setSearchCollectionId(Integer searchCollectionId) {
+		this.searchCollectionId = searchCollectionId;
+	}
+
+	public CollectionEntity getCollectionEntity() {
+		return collectionEntity;
+	}
+
+	public void setCollectionEntity(CollectionEntity collectionEntity) {
+		this.collectionEntity = collectionEntity;
+	}
+
+	public TradeItemEntity getTradeItemEntity() {
+		return tradeItemEntity;
+	}
+
+	public void setTradeItemEntity(TradeItemEntity tradeItemEntity) {
+		this.tradeItemEntity = tradeItemEntity;
+	}
+
+	public LeagueEntity getLeagueEntity() {
+		return leagueEntity;
+	}
+
+	public void setLeagueEntity(LeagueEntity leagueEntity) {
+		this.leagueEntity = leagueEntity;
+	}
+
+	public UserEntity getUserEntity() {
+		return userEntity;
+	}
+
+	public void setUserEntity(UserEntity userEntity) {
+		this.userEntity = userEntity;
+	}
+	
+	
 }

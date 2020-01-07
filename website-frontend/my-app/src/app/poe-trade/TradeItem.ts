@@ -1,18 +1,22 @@
 export class TradeItem {
-    tradeId:number;
+    itemId:number;
     name:string;
     description:string;
     tradeUrl:string;
     priceHistoryUrl:string;
-    emailId:string;
+    userId:number;
+    collectionName:String;
+    leagueName:String;
 
-    constructor(tradeId:number, name:string, description:string, tradeUrl:string, priceHistoryUrl:string, emailId:string) {
-        this.tradeId = tradeId;
+    constructor(itemId:number, name:string, description:string, tradeUrl:string, priceHistoryUrl:string, userId:number, collectionName:String, leagueName:String) {
+        this.itemId = itemId;
         this.name = name;
         this.description = description;
         this.tradeUrl = tradeUrl;
         this.priceHistoryUrl = priceHistoryUrl;
-        this.emailId = emailId;
+        this.userId = userId;
+        this.collectionName = collectionName;
+        this.leagueName = leagueName;
     }
 
 }

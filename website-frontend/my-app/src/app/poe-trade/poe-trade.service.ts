@@ -24,6 +24,7 @@ export class PoeTradeService {
 
   getTradeItems() {
     let user:User = JSON.parse(sessionStorage.getItem("user"));
-    return this.httpClient.get<TradeItem[]>(this.tradeUrl+"getTradeItems?emailId=" + user.email);
+    console.log("userId: " + user.userId);
+    return this.httpClient.get<TradeItem[]>(this.tradeUrl+"getTradeItems?userId=" + user.userId);
   }
 }

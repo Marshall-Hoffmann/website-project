@@ -30,6 +30,7 @@ export class PoeTradeComponent implements OnInit {
   successMessage = null;
 
   view="current";
+  currentCollection="default";
   newItemForm;
 
   ngOnInit() {
@@ -46,13 +47,16 @@ export class PoeTradeComponent implements OnInit {
   }
 
   addItem(tradeItem:TradeItem) {
-    tradeItem.tradeId = -1;
+    tradeItem.itemId = -1;
     let user:User = JSON.parse(sessionStorage.getItem("user"));
-    tradeItem.emailId = user.email;
+    tradeItem.userId = user.userId;
+    tradeItem.collectionName="default";
+    tradeItem.leagueName="testLeague";
     this.tradeService.addTradeItem(tradeItem).subscribe(
       tradeId => {
-        tradeItem.tradeId = tradeId;
+        tradeItem.itemId = tradeId;
         this.tradeItems.push(tradeItem);
+        console.log(tradeItem);
         this.successMessage = "Trade item with id: " + tradeId + " was added successfully";
         this.errorMessage = null;
         this.view="current";
@@ -70,6 +74,7 @@ export class PoeTradeComponent implements OnInit {
     this.tradeService.getTradeItems().subscribe(
       tradeItems => {
         this.tradeItems = tradeItems;
+        console.log(tradeItems);
         this.errorMessage = null;
       }, err => {
         this.errorMessage = "Trade Items could not be found";
@@ -82,7 +87,7 @@ export class PoeTradeComponent implements OnInit {
   deleteItem(itemId) {
     this.tradeService.deleteTradeItem(itemId).subscribe(
       tradeId => {
-        this.tradeItems = this.tradeItems.filter(x => x.tradeId != itemId);
+        this.tradeItems = this.tradeItems.filter(x => x.itemId != itemId);
         this.successMessage = "Trade item with id: " + itemId + " was successfully deleted";
         this.errorMessage = null;
       }, err => {

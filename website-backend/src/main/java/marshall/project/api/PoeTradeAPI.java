@@ -25,9 +25,9 @@ public class PoeTradeAPI {
 	PoeTradeService poeTradeService;
 	
 	@RequestMapping(value="/poe-trade/getTradeItems", method=RequestMethod.GET)
-	public ResponseEntity<List<TradeItem>> getTradeItems(@RequestParam String emailId) {
+	public ResponseEntity<List<TradeItem>> getTradeItems(@RequestParam Integer userId) {
 		try {
-			List<TradeItem> tradeItems = poeTradeService.getTradeItems(emailId);
+			List<TradeItem> tradeItems = poeTradeService.getTradeItems(userId);
 			return new ResponseEntity<List<TradeItem>>(tradeItems, HttpStatus.OK);
 		} catch (Exception e) {
 			// TODO: handle exception

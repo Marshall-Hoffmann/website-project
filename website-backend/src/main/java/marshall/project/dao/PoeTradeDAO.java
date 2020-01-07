@@ -10,5 +10,5 @@ public interface PoeTradeDAO {
 	
 	public Integer deleteTradeItem(Integer itemId) throws Exception;
 	
-	public List<TradeItem> getTradeItems(String emailId) throws Exception;
+	public List<TradeItem> getTradeItems(Integer userId) throws Exception;
 }

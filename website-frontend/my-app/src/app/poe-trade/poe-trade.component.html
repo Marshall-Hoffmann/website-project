@@ -20,7 +20,7 @@
                 <a href="{{item.tradeUrl}}" class="btn btn-primary">Trade</a>
                 <a *ngIf="item.priceHistoryUrl" href="{{item.priceHistoryUrl}}" class="btn btn-success">Price
                     History</a>
-                    <a (click)="deleteItem(item.tradeId)" class="btn btn-danger">X</a>
+                    <a (click)="deleteItem(item.itemId)" class="btn btn-danger">X</a>
             </div>
         </div>
     </div>

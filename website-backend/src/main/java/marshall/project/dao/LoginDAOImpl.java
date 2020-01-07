@@ -2,6 +2,7 @@ package marshall.project.dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 
 import org.springframework.stereotype.Repository;
 
@@ -18,7 +19,11 @@ public class LoginDAOImpl implements LoginDAO {
 	public User login(User credentials) throws Exception {
 		User returnUser = new User();
 		try {
-			UserEntity userEntity = entityManager.find(UserEntity.class, credentials.getEmail());
+			String jqplString = "select u.userId from UserEntity u where u.email = :email";
+			Query query = entityManager.createQuery(jqplString);
+			query.setParameter("email", credentials.getEmail());
+			UserEntity userEntity = entityManager.find(UserEntity.class, query.getSingleResult());
+			
 			returnUser.setEmail(userEntity.getEmail());
 			returnUser.setName(userEntity.getName());
 			returnUser.setPassword(userEntity.getPassword());
