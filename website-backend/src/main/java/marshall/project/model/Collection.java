@@ -5,6 +5,16 @@ public class Collection {
 	private Integer collectionId;
 	
 	private String collectionName;
+	
+	private Integer collectionUserId;
+
+	public Integer getCollectionUserId() {
+		return collectionUserId;
+	}
+
+	public void setCollectionUserId(Integer collectionUserId) {
+		this.collectionUserId = collectionUserId;
+	}
 
 	public Integer getCollectionId() {
 		return collectionId;

@@ -72,8 +72,10 @@ insert into USER_LIST values ("Marshall2", "pass", "test2@gmail.com", 2);
 --alter table USER_LIST set 'USER_ID'=2 where 'email' = 'test2@gmail.com'; 
 
 insert into COLLECTION_LIST values (1, "default", 1);
+insert into COLLECTION_LIST values (2, "Legion", 1);
 
 insert into LEAGUE_LIST values (1, "testLeague");
+insert into LEAGUE_LIST values (2, "Legion");
 
 select * from trade_list;
 

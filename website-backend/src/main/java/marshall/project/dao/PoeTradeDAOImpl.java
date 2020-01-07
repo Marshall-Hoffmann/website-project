@@ -14,6 +14,7 @@ import marshall.project.entity.LeagueEntity;
 import marshall.project.entity.SearchCollectionEntity;
 import marshall.project.entity.TradeItemEntity;
 import marshall.project.entity.UserEntity;
+import marshall.project.model.Collection;
 import marshall.project.model.TradeItem;
 
 @Repository
@@ -60,6 +61,7 @@ public class PoeTradeDAOImpl implements PoeTradeDAO {
 	
 	public Integer deleteTradeItem(Integer itemId) throws Exception {
 		try {
+			System.out.println("here: " + itemId);
 			SearchCollectionEntity searchCollectionEntity = entityManager.find(SearchCollectionEntity.class, itemId);
 			
 			searchCollectionEntity.setCollectionEntity(null);
@@ -117,5 +119,41 @@ public class PoeTradeDAOImpl implements PoeTradeDAO {
 			List<TradeItem> emptyList = null;
 			return emptyList;
 		}
+	}
+	
+	public List<String> getCollections(Integer userId) throws Exception {
+		try {
+			String jpqlString = "select c.collectionName from CollectionEntity c where c.userEntity.userId = :userId";
+			Query query = entityManager.createQuery(jpqlString);
+			query.setParameter("userId", userId);
+			List<String> collectionNames = query.getResultList();
+			List<String> returnCollectionNames = new ArrayList<String>();
+			if(collectionNames != null) {
+				for(String c:collectionNames) {
+					returnCollectionNames.add(c);
+				}
+			}
+			return returnCollectionNames;
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			List<String> emptyList = null;
+			return emptyList;
+		}
+	}
+	
+	public Integer addCollection(Collection collection) throws Exception {
+		CollectionEntity collectionEntity = new CollectionEntity();
+		Integer collectionId;
+		try {
+			collectionEntity.setCollectionName(collection.getCollectionName());
+			collectionEntity.setUserEntity(entityManager.find(UserEntity.class, collection.getCollectionUserId()));
+			entityManager.persist(collectionEntity);
+			collectionId = collectionEntity.getCollectionId();
+		} catch (Exception e) {
+			// TODO: handle exception
+			return -1;
+		}
+		return collectionId;
 	}
 }

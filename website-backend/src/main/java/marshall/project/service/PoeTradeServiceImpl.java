@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import marshall.project.dao.PoeTradeDAO;
+import marshall.project.model.Collection;
 import marshall.project.model.TradeItem;
 
 @Service
@@ -47,5 +48,29 @@ public class PoeTradeServiceImpl implements PoeTradeService {
 			throw new Exception(e);
 		}
 		return itemList;
+	}
+	
+	@Override
+	public List<String> getCollections(Integer userId) throws Exception {
+		List<String> collections;
+		try {
+			collections = poeTradeDAO.getCollections(userId);
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw new Exception(e);
+		}
+		return collections;
+	}
+	
+	@Override
+	public Integer addCollection(Collection collection) throws Exception {
+		Integer returnInteger;
+		try {
+			returnInteger = poeTradeDAO.addCollection(collection);
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw new Exception(e);
+		}
+		return returnInteger;
 	}
 }

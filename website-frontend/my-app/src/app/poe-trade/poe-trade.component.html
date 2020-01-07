@@ -1,19 +1,43 @@
 <br>
 
-<h2 class="text-center text-primary">Poe Trade Tracker</h2>
-
-<br>
-<div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
-    <button class="btn btn-success" (click)="view='new'">Add New Item</button>
+<div class="text-center">
+    <h2 class="text-primary">Poe Trade Tracker</h2>
+    <!-- <div class="btn-group">
+        <button type="button" class="btn btn-primary">Action</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false">
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+    </div> -->
+    <div *ngIf="view==='current'">Collection:
+    <select id="collectionSelector" class="col-2" (change)="changeCollection($event.target.value)">
+    <option *ngFor="let collection of collections" value="{{collection}}">{{collection}}</option>
+    </select></div>
 </div>
 
-<div *ngIf="view==='new'" style="padding: 0;" class="container card text-center">
-    <button class="btn btn-primary" (click)="view='current'">View Old Items</button>
+<br>
+
+    <div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
+        <button class="btn btn-success" (click)="view='new'">Add New Item</button>
+    </div>
+    <div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
+        <button class="btn btn-warning" (click)="view='newCollection'">Add New Collection</button>
+    </div>
+
+
+<div *ngIf="view==='new' || view==='newCollection'" style="padding: 0;" class="container card text-center">
+    <button class="btn btn-primary" (click)="view='current'">View Dashboard</button>
 </div>
 
 <div *ngIf="view==='current'" class="container">
     <div class="row" style="text-align: center">
-        <div class="card col-4 text-center" style="padding: 0;" *ngFor="let item of tradeItems">
+        <div class="card col-4 text-center" style="padding: 0;" *ngFor="let item of filteredTradeItems">
             <h3 class="card-header text-primary">{{item.name}}</h3>
             <p class="card-body">{{item.description}}</p>
             <div class="card-footer">
@@ -48,9 +72,38 @@
             <label for="priceHistoryUrl">Price History Url</label>
             <input class="form-control" type="text" id="priceHistoryUrl" formControlName="priceHistoryUrl">
         </div>
+
+        <div>
+            <label for="collectionName">Collection</label>
+            <select class="form-control" id="collectionName" formControlName="collectionName">
+                <option *ngFor="let collection of collections" value="{{collection}}">{{collection}}</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="leagueName">League</label>
+            <select class="form-control" id="leagueName" formControlName="leagueName">
+                <option *ngFor="let league of leagues" value="{{league}}">{{league}}</option>
+            </select>
+        </div>
         <br>
         <div>
             <button class="btn btn-success col-12" type="submit">Create New Item</button>
+        </div>
+        <br>
+    </form>
+</div>
+
+<div *ngIf="view==='newCollection'" class="container" style="padding: 0;">
+    <form [formGroup]="newCollectionForm" (ngSubmit)="addCollection(newCollectionForm.value)">
+        <br>
+        <div>
+            <label for="collectionName">Collection Name</label>
+            <input class="form-control" type="text" id="collectionName" formControlName="collectionName">
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-success col-12" type="submit">Create New Collection</button>
         </div>
         <br>
     </form>

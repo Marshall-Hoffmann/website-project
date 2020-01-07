@@ -3,6 +3,7 @@ import { HttpClient } from '../../../node_modules/@angular/common/http'
 import { TradeItem } from './TradeItem';
 import { User } from '../shared/models/user';
 import { LoginService } from '../login.service';
+import { Collection } from '../shared/models/Collection';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,9 @@ export class PoeTradeService {
   constructor(private httpClient:HttpClient, private loginService:LoginService) { }
 
   tradeUrl = "http://localhost:8080/poe-trade/";
+  user:User = JSON.parse(sessionStorage.getItem("user"));
 
   addTradeItem(tradeItem:TradeItem) {
-    let user:User = JSON.parse(sessionStorage.getItem("user"));
     return this.httpClient.post<number>(this.tradeUrl+"addTradeItem", tradeItem);
   }
 
@@ -23,8 +24,14 @@ export class PoeTradeService {
   }
 
   getTradeItems() {
-    let user:User = JSON.parse(sessionStorage.getItem("user"));
-    console.log("userId: " + user.userId);
-    return this.httpClient.get<TradeItem[]>(this.tradeUrl+"getTradeItems?userId=" + user.userId);
+    return this.httpClient.get<TradeItem[]>(this.tradeUrl+"getTradeItems?userId=" + this.user.userId);
+  }
+
+  addCollection(collection:Collection) {
+    return this.httpClient.post<number>(this.tradeUrl+"addCollection",collection);
+  }
+
+  getCollections() {
+    return this.httpClient.get<String[]>(this.tradeUrl+"getCollections?userId=" + this.user.userId);
   }
 }

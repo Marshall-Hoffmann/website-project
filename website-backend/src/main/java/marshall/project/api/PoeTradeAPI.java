@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+import marshall.project.model.Collection;
 import marshall.project.model.TradeItem;
 import marshall.project.service.PoeTradeService;
 
@@ -51,6 +52,28 @@ public class PoeTradeAPI {
 		try {
 			Integer itemId = poeTradeService.deleteTradeItem(id);
 			return new ResponseEntity<Integer>(itemId, HttpStatus.OK);
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);
+		}
+	}
+	
+	@RequestMapping(value="/poe-trade/getCollections", method = RequestMethod.GET)
+	public ResponseEntity<List<String>> getCollections(@RequestParam Integer userId) {
+		try {
+			List<String> collections = poeTradeService.getCollections(userId);
+			return new ResponseEntity<List<String>>(collections, HttpStatus.OK);
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);
+		}
+	}
+	
+	@RequestMapping(value="/poe-trade/addCollection", method=RequestMethod.POST)
+	public ResponseEntity<Integer> addCollection(@RequestBody Collection collection) {
+		try {
+			Integer collectionId = poeTradeService.addCollection(collection);
+			return new ResponseEntity<Integer>(collectionId, HttpStatus.OK);
 		} catch (Exception e) {
 			// TODO: handle exception
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage(), e);

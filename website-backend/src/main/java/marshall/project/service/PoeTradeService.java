@@ -2,6 +2,7 @@ package marshall.project.service;
 
 import java.util.List;
 
+import marshall.project.model.Collection;
 import marshall.project.model.TradeItem;
 
 public interface PoeTradeService {
@@ -11,5 +12,9 @@ public interface PoeTradeService {
 	public Integer deleteTradeItem(Integer itemId) throws Exception;
 	
 	public List<TradeItem> getTradeItems(Integer userId) throws Exception;
+	
+	public List<String> getCollections(Integer userId) throws Exception;
+	
+	public Integer addCollection(Collection collection) throws Exception;
 	
 }
