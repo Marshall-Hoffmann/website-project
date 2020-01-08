@@ -9,16 +9,27 @@
         </ul>
         <div *ngIf="!loggedInUser">
             <ul class="nav navbar-nav navbar-right" routerLinkActive="active">
-                <li class="nav-item"><a class="nav-link" routerLink="signup">Sign Up</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="signup">Register</a></li>
                 <li class="nav-item"><a class="nav-link" routerLink="login">Login</a></li>
             </ul>
         </div>
         <!-- Todo: Make the signout a drop down from user name -->
-        <div *ngIf="loggedInUser">
-            User: {{loggedInUser.name}}
+        <!-- <div *ngIf="loggedInUser">
+            <div class="text-light">
+                User: {{loggedInUser.name}}
+            </div>
             <ul class="nav navbar-nav navbar-right" routerLinkActive="active">
                 <li class="nav-item"><a class="nav-link" (click)='signout()'>Sign Out</a></li>
             </ul>
+        </div> -->
+        <div *ngIf="loggedInUser" class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{loggedInUser.name}}
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item nav-link" (click)='signout()'>Sign Out</a>
+            </div>
         </div>
     </div>
 </nav>

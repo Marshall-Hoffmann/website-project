@@ -1,20 +1,8 @@
 <br>
 
 <div class="text-center">
-    <h2 class="text-primary">Poe Trade Tracker</h2>
-    <!-- <div class="btn-group">
-        <button type="button" class="btn btn-primary">Action</button>
-        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-        </button>
-        <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-    </div> -->
+    <h2 class="text-dark">Poe Trade Tracker</h2>
+    
     <div *ngIf="view==='current'">Collection:
     <select id="collectionSelector" class="col-2" (change)="changeCollection($event.target.value)">
     <option *ngFor="let collection of collections" value="{{collection}}">{{collection}}</option>
@@ -55,40 +43,46 @@
         <br>
         <div>
             <label for="name">Item Name</label>
-            <input class="form-control" type="text" id="name" formControlName="name">
+            <input placeholder="Example: Mirror of Kalandra" class="form-control required" type="text" id="name" formControlName="name">
         </div>
+        <div [hidden]="newItemForm.controls.name.pristine || !newItemForm.controls.name.errors?.required" class="required alert alert-danger">Name is required</div>
 
         <div>
             <label for="description">Description</label>
-            <input class="form-control" type="text" id="description" formControlName="description">
+            <input placeholder="Example: Currency used to mirror an item" class="form-control required" type="text" id="description" formControlName="description">
+            
         </div>
+        <div [hidden]="newItemForm.controls.description.pristine || !newItemForm.controls.description.errors?.required" class="required alert alert-danger">Description is required</div>
 
         <div>
             <label for="tradeUrl">Poe Trade Url</label>
-            <input class="form-control" type="text" id="tradeUrl" formControlName="tradeUrl">
+            <input placeholder="Example: https://www.pathofexile.com/trade/search/Hardcore%20Metamorph/xRR4U7" class="form-control required" type="text" id="tradeUrl" formControlName="tradeUrl">
         </div>
+        <div [hidden]="newItemForm.controls.tradeUrl.pristine || !newItemForm.controls.tradeUrl.errors?.required" class="required alert alert-danger">Trade Url is required</div>
 
         <div>
             <label for="priceHistoryUrl">Price History Url</label>
-            <input class="form-control" type="text" id="priceHistoryUrl" formControlName="priceHistoryUrl">
+            <input placeholder="Optional - Example: https://poe.ninja/challengehc/currency/mirror-of-kalandra" class="form-control" type="text" id="priceHistoryUrl" formControlName="priceHistoryUrl">
         </div>
 
         <div>
             <label for="collectionName">Collection</label>
-            <select class="form-control" id="collectionName" formControlName="collectionName">
+            <select class="form-control required" id="collectionName" formControlName="collectionName">
                 <option *ngFor="let collection of collections" value="{{collection}}">{{collection}}</option>
             </select>
         </div>
+        <div [hidden]="newItemForm.controls.collectionName.pristine || !newItemForm.controls.collectionName.errors?.required" class="required alert alert-danger">Please choose a collection</div>
 
         <div>
             <label for="leagueName">League</label>
-            <select class="form-control" id="leagueName" formControlName="leagueName">
+            <select class="form-control required" id="leagueName" formControlName="leagueName">
                 <option *ngFor="let league of leagues" value="{{league}}">{{league}}</option>
             </select>
         </div>
+        <div [hidden]="newItemForm.controls.leagueName.pristine || !newItemForm.controls.leagueName.errors?.required" class="required alert alert-danger">League is required</div>
         <br>
         <div>
-            <button class="btn btn-success col-12" type="submit">Create New Item</button>
+            <button class="btn btn-success col-12" type="submit" [disabled]="newItemForm.invalid">Create New Item</button>
         </div>
         <br>
     </form>

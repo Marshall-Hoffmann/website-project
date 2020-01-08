@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TradeItemList } from './TradeItemList';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { TradeItem } from './TradeItem';
 import { PoeTradeService } from './poe-trade.service';
 import { User } from '../shared/models/user';
@@ -14,14 +14,14 @@ import { Collection } from '../shared/models/Collection';
 })
 export class PoeTradeComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private tradeService: PoeTradeService, private router:Router) { 
+  constructor(private formBuilder: FormBuilder, private tradeService: PoeTradeService, private router:Router) {
     this.newItemForm = this.formBuilder.group({
-      name: '',
-      description:'',
-      tradeUrl:'',
-      priceHistoryUrl:'',
-      collectionName:['default'],
-      leagueName:['Synthesis']
+      name: ['', Validators.required],
+      description:['', Validators.required],
+      tradeUrl:['', Validators.required],
+      priceHistoryUrl:[''],
+      collectionName:['', Validators.required],
+      leagueName:['', Validators.required]
     });
 
     this.newCollectionForm = this.formBuilder.group({
@@ -40,7 +40,7 @@ export class PoeTradeComponent implements OnInit {
   view="current";
   currentCollection="View All";
   collections:String[]=[];
-  leagues:String[]=["Legion", "Synthesis"];
+  leagues:String[]=["Legion"];
   newItemForm;
   newCollectionForm;
 
@@ -62,14 +62,10 @@ export class PoeTradeComponent implements OnInit {
     tradeItem.itemId = -1;
     let user:User = JSON.parse(sessionStorage.getItem("user"));
     tradeItem.userId = user.userId;
-    // tradeItem.collectionName="default";
-    // tradeItem.leagueName="testLeague";
-    console.log(tradeItem);
     this.tradeService.addTradeItem(tradeItem).subscribe(
       tradeId => {
         tradeItem.itemId = tradeId;
         this.tradeItems.push(tradeItem);
-        console.log(tradeItem);
         this.successMessage = "Trade item with id: " + tradeId + " was added successfully";
         this.errorMessage = null;
         this.view="current";
@@ -88,7 +84,6 @@ export class PoeTradeComponent implements OnInit {
       tradeItems => {
         this.tradeItems = tradeItems;
         this.filteredTradeItems = tradeItems;
-        console.log(tradeItems);
         this.errorMessage = null;
       }, err => {
         this.errorMessage = "Trade Items could not be found";
@@ -104,7 +99,6 @@ export class PoeTradeComponent implements OnInit {
     this.tradeService.addCollection(collection).subscribe(
       collectionId => {
         this.collections.push(collection.collectionName);
-        console.log(collection);
         this.successMessage = "Collection with id: " + collectionId + " was added successfully";
         this.errorMessage = null;
         this.view="current";
@@ -123,7 +117,6 @@ export class PoeTradeComponent implements OnInit {
         this.collections = collections;
         collections.push("View All");
         this.currentCollection = "View All";
-        console.log("collections: " + this.collections);
       }, err => {
         this.errorMessage = "Collections could not be fetched";
       }
@@ -131,19 +124,15 @@ export class PoeTradeComponent implements OnInit {
   }
 
   changeCollection(collection) {
-    console.log("here");
     this.currentCollection = collection;
     this.filterTradeItems(collection);
-    console.log(collection);
   }
 
   filterTradeItems(collection) {
     if(collection == "View All") {
-      console.log("here2");
       this.filteredTradeItems = this.tradeItems;
     } else {
       this.filteredTradeItems = this.tradeItems.filter(x => x.collectionName == collection);
-      console.log(this.filteredTradeItems);
     }
   }
 

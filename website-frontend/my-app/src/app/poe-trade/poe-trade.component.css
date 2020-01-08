@@ -1,0 +1,11 @@
+input.ng-valid, select.ng-valid {
+    border-left: solid green 5px;
+}
+
+input.ng-invalid.ng-dirty, select.ng-invalid.ng-dirty {
+    border-left: solid red 5px;
+}
+
+input.ng-pristine.required, select.ng-pristine.required {
+    border-left: solid orange 5px;
+}
