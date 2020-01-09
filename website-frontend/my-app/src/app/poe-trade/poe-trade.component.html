@@ -3,7 +3,7 @@
 <div class="text-center">
     <h2 class="text-dark">Poe Trade Tracker</h2>
     
-    <div *ngIf="view==='current'">
+    <div [hidden]="view!=='current'">
         <div class="col-2" style="display: inline-block;">
             <div class="form-group">
                 <span style="white-space: nowrap;">

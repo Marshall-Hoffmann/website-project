@@ -25,7 +25,7 @@ public class PoeTradeAPI {
 	@Autowired
 	PoeTradeService poeTradeService;
 	
-	@RequestMapping(value="/poe-trade/getTradeItems", method=RequestMethod.GET)
+	@RequestMapping(value="/poe-trade/tradeItems", method=RequestMethod.GET)
 	public ResponseEntity<List<TradeItem>> getTradeItems(@RequestParam Integer userId) {
 		try {
 			List<TradeItem> tradeItems = poeTradeService.getTradeItems(userId);
@@ -36,7 +36,7 @@ public class PoeTradeAPI {
 		}
 	}
 	
-	@RequestMapping(value="/poe-trade/addTradeItem", method=RequestMethod.POST)
+	@RequestMapping(value="/poe-trade/tradeItems", method=RequestMethod.POST)
 	public ResponseEntity<Integer> addTradeItem(@RequestBody TradeItem tradeItem) {
 		try {
 			Integer itemId = poeTradeService.addTradeItem(tradeItem);
@@ -47,7 +47,7 @@ public class PoeTradeAPI {
 		}
 	}
 	
-	@RequestMapping(value="/poe-trade/deleteTradeItem/{id}", method=RequestMethod.DELETE)
+	@RequestMapping(value="/poe-trade/tradeItems/{id}", method=RequestMethod.DELETE)
 	public ResponseEntity<Integer> deleteTradeItem(@PathVariable Integer id) {
 		try {
 			Integer itemId = poeTradeService.deleteTradeItem(id);
@@ -58,7 +58,7 @@ public class PoeTradeAPI {
 		}
 	}
 	
-	@RequestMapping(value="/poe-trade/getCollections", method = RequestMethod.GET)
+	@RequestMapping(value="/poe-trade/collections", method = RequestMethod.GET)
 	public ResponseEntity<List<String>> getCollections(@RequestParam Integer userId) {
 		try {
 			List<String> collections = poeTradeService.getCollections(userId);
@@ -69,7 +69,7 @@ public class PoeTradeAPI {
 		}
 	}
 	
-	@RequestMapping(value="/poe-trade/addCollection", method=RequestMethod.POST)
+	@RequestMapping(value="/poe-trade/collections", method=RequestMethod.POST)
 	public ResponseEntity<Integer> addCollection(@RequestBody Collection collection) {
 		try {
 			Integer collectionId = poeTradeService.addCollection(collection);

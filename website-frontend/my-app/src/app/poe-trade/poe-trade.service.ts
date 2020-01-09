@@ -19,22 +19,22 @@ export class PoeTradeService {
 
 
   addTradeItem(tradeItem:TradeItem) {
-    return this.httpClient.post<number>(this.tradeUrl+"addTradeItem", tradeItem);
+    return this.httpClient.post<number>(this.tradeUrl+"tradeItems", tradeItem);
   }
 
   deleteTradeItem(tradeId:number) {
-    return this.httpClient.delete<TradeItem>(this.tradeUrl+"deleteTradeItem/"+tradeId);
+    return this.httpClient.delete<TradeItem>(this.tradeUrl+"tradeItems/"+tradeId);
   }
 
   getTradeItems() {
-    return this.httpClient.get<TradeItem[]>(this.tradeUrl+"getTradeItems?userId=" + this.user.userId);
+    return this.httpClient.get<TradeItem[]>(this.tradeUrl+"tradeItems?userId=" + this.user.userId);
   }
 
   addCollection(collection:Collection) {
-    return this.httpClient.post<number>(this.tradeUrl+"addCollection",collection);
+    return this.httpClient.post<number>(this.tradeUrl+"collections",collection);
   }
 
   getCollections() {
-    return this.httpClient.get<String[]>(this.tradeUrl+"getCollections?userId=" + this.user.userId);
+    return this.httpClient.get<String[]>(this.tradeUrl+"collections?userId=" + this.user.userId);
   }
 }

@@ -66,6 +66,9 @@ export class PoeTradeComponent implements OnInit {
       tradeId => {
         tradeItem.itemId = tradeId;
         this.tradeItems.push(tradeItem);
+        if(tradeItem.collectionName == this.currentCollection) {
+          this.filteredTradeItems.push(tradeItem);
+        }
         this.successMessage = "Trade item with id: " + tradeId + " was added successfully";
         this.errorMessage = null;
         this.view="current";
@@ -114,8 +117,8 @@ export class PoeTradeComponent implements OnInit {
   getCollections() {
     this.tradeService.getCollections().subscribe(
       collections => {
-        this.collections = collections;
-        collections.push("View All");
+        this.collections.push("View All");
+        collections.forEach(x => this.collections.push(x));
         this.currentCollection = "View All";
       }, err => {
         this.errorMessage = "Collections could not be fetched";
