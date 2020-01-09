@@ -37,6 +37,7 @@ export class LoginComponent implements OnInit {
         sessionStorage.setItem("user", JSON.stringify(this.user));
         this.loginService.updateUser(response);
         this.router.navigate(['/home']);
+        // window.location.reload();
 
       }, error => {
         this.errorMessage = "Invalid credentials!";

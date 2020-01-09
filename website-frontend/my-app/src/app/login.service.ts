@@ -10,7 +10,7 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  private loggedInUserDetails = new BehaviorSubject<User>(JSON.parse(sessionStorage.getItem("user")));
+  loggedInUserDetails = new BehaviorSubject<User>(JSON.parse(sessionStorage.getItem("user")));
   currentUser = this.loggedInUserDetails.asObservable();
 
   updateUser(user:User) {

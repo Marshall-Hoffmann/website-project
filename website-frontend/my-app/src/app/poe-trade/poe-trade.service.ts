@@ -10,10 +10,13 @@ import { Collection } from '../shared/models/Collection';
 })
 export class PoeTradeService {
 
-  constructor(private httpClient:HttpClient, private loginService:LoginService) { }
+  constructor(private httpClient:HttpClient, private loginService:LoginService) { 
+    this.loginService.currentUser.subscribe(user => this.user = user);
+  }
 
   tradeUrl = "http://localhost:8080/poe-trade/";
-  user:User = JSON.parse(sessionStorage.getItem("user"));
+  user:User;
+
 
   addTradeItem(tradeItem:TradeItem) {
     return this.httpClient.post<number>(this.tradeUrl+"addTradeItem", tradeItem);
