@@ -1,7 +1,7 @@
 <br>
 
 <div class="text-center">
-    <h2 class="text-dark">Poe Trade Tracker</h2>
+    <!-- <h2 class="text-dark">Poe Trade Tracker</h2> -->
     
     <div [hidden]="view!=='current'">
         <div class="col-2" style="display: inline-block;">
@@ -13,16 +13,17 @@
                     <select id="collectionSelector" class="form-control" style="display: inline-block;" (change)="changeCollection($event.target.value)">
                         <option *ngFor="let collection of collections" value="{{collection}}">{{collection}}</option>
                     </select>
+                    <i class="fas fa-plus"></i>
                 </span>
             </div>
         </div>
     </div>
 </div>
 
-<div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
+<div *ngIf="view==='current'" style="padding: 0;" class="container card bg-dark text-center">
 <button class="btn btn-success text-dark" (click)="view='new'">Add New Item</button>
 </div>
-<div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
+<div *ngIf="view==='current'" style="padding: 0;" class="container card bg-dark text-center">
 <button class="btn btn-warning text-dark" (click)="view='newCollection'">Add New Collection</button>
 </div>
 

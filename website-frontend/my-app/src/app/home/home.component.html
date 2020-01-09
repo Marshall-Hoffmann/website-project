@@ -1,2 +1,15 @@
 <br>
-<h2 class="text-center">Welcome to Poe Trade Dashboard!</h2>
+<h2 class="text-center">Welcome to Poe Trade Tracker!</h2>
+<br>
+<br>
+<div *ngIf="!user" style="padding: 0;" class="container col-3 card bg-dark text-center">
+    <button class="btn btn-primary text-dark">Login</button>
+</div>
+<br>
+<div *ngIf="!user" style="padding: 0;" class="container col-3 card bg-dark text-center">
+    <button class="btn btn-warning text-dark">Register</button>
+</div>
+
+<div *ngIf="user" style="padding: 0;" class="container col-3 card bg-dark text-center">
+    <button routerLink="/poe-trade" class="btn btn-warning text-dark">Poe Trade Dashboard</button>
+</div>
