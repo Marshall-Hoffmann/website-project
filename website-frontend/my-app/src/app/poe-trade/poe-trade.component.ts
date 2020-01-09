@@ -25,7 +25,7 @@ export class PoeTradeComponent implements OnInit {
     });
 
     this.newCollectionForm = this.formBuilder.group({
-      collectionName:''
+      collectionName:['', Validators.required]
     });
   }
 

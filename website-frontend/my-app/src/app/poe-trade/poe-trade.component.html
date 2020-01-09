@@ -3,20 +3,28 @@
 <div class="text-center">
     <h2 class="text-dark">Poe Trade Tracker</h2>
     
-    <div *ngIf="view==='current'">Collection:
-    <select id="collectionSelector" class="col-2" (change)="changeCollection($event.target.value)">
-    <option *ngFor="let collection of collections" value="{{collection}}">{{collection}}</option>
-    </select></div>
+    <div *ngIf="view==='current'">
+        <div class="col-2" style="display: inline-block;">
+            <div class="form-group">
+                <span style="white-space: nowrap;">
+                    <label for="collectionSelector">
+                        Collection:&nbsp;
+                    </label>
+                    <select id="collectionSelector" class="form-control" style="display: inline-block;" (change)="changeCollection($event.target.value)">
+                        <option *ngFor="let collection of collections" value="{{collection}}">{{collection}}</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
 
-<br>
-
-    <div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
-        <button class="btn btn-success" (click)="view='new'">Add New Item</button>
-    </div>
-    <div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
-        <button class="btn btn-warning" (click)="view='newCollection'">Add New Collection</button>
-    </div>
+<div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
+<button class="btn btn-success text-dark" (click)="view='new'">Add New Item</button>
+</div>
+<div *ngIf="view==='current'" style="padding: 0;" class="container card text-center">
+<button class="btn btn-warning text-dark" (click)="view='newCollection'">Add New Collection</button>
+</div>
 
 
 <div *ngIf="view==='new' || view==='newCollection'" style="padding: 0;" class="container card text-center">
@@ -29,10 +37,11 @@
             <h3 class="card-header text-primary">{{item.name}}</h3>
             <p class="card-body">{{item.description}}</p>
             <div class="card-footer">
-                <a href="{{item.tradeUrl}}" class="btn btn-primary">Trade</a>
-                <a *ngIf="item.priceHistoryUrl" href="{{item.priceHistoryUrl}}" class="btn btn-success">Price
-                    History</a>
-                    <a (click)="deleteItem(item.itemId)" class="btn btn-danger">X</a>
+                <a href="{{item.tradeUrl}}" class="btn btn-primary text-dark">Trade</a>
+                <a *ngIf="item.priceHistoryUrl" href="{{item.priceHistoryUrl}}" class="btn btn-success text-dark">
+                    Price History
+                </a>
+                <a (click)="deleteItem(item.itemId)" class="btn btn-danger text-dark">Delete</a>
             </div>
         </div>
     </div>
@@ -93,11 +102,12 @@
         <br>
         <div>
             <label for="collectionName">Collection Name</label>
-            <input class="form-control" type="text" id="collectionName" formControlName="collectionName">
+            <input class="form-control required" type="text" id="collectionName" formControlName="collectionName">
         </div>
+        <div [hidden]="newCollectionForm.controls.collectionName.pristine || !newCollectionForm.controls.collectionName.errors?.required" class="required alert alert-danger">Please choose a collection name</div>
         <br>
         <div>
-            <button class="btn btn-success col-12" type="submit">Create New Collection</button>
+            <button class="btn btn-success col-12" type="submit" [disabled]="newCollectionForm.invalid">Create New Collection</button>
         </div>
         <br>
     </form>
